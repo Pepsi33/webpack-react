@@ -1,0 +1,35 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "rootDirs": ["src"],
+        "baseUrl": "./src/",
+        "typeRoots": ["./typings"],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "preserve",
+        "lib": ["dom", "es2015", "es2016"],
+        /* Basic Options */
+        "target": "ES2019",
+        "module": "ESNext",
+        /* Strict Type-Checking Options */
+        "strict": true,
+        /* Additional Checks */
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        /* Module Resolution Options */
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        /* Experimental Options */
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        /* Advanced Options */
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "typings/**/*"],
+    "exclude": ["node_modules", "dist", "test"],
+    "types": ["typePatches"]
+}

@@ -1,0 +1,10 @@
+node_modules/
+test/
+dist/
+scripts/
+# typings/
+babel.config.js
+postcss.config.js
+mock*
+test*
+Test*
