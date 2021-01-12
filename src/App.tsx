@@ -1,4 +1,5 @@
 import React, { memo, useState } from 'react';
+import { Button } from 'antd';
 import { hot } from 'react-hot-loader/root';
 
 import style from './app.scss';
@@ -17,9 +18,9 @@ const Counter = memo(function Counter({ initialCount = 0 }: CounterProps) {
     return (
         <div className={style.counter}>
             <input type="text" value={count} readOnly />
-            <button type="button" onClick={add}>
+            <Button type="primary" onClick={add} className={style.btn}>
                 +
-            </button>
+            </Button>
         </div>
     );
 });

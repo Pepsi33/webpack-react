@@ -1,17 +1,7 @@
-/*
- * @Author: your name
- * @Date: 2021-01-11 14:29:57
- * @LastEditTime: 2021-01-12 11:23:18
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /webpack-react/scripts/middlewares/webpackMiddleware.js
- */
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const devConfig = require('../configs/webpack.dev.config');
-const { HMR_PATH } = require('../untils/constants');
-
-console.log(devConfig);
+const { HMR_PATH } = require('../utils/constants');
 
 module.exports = function webpackMiddleware(compiler) {
     const publicPath = devConfig.output.publicPath;

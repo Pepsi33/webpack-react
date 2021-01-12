@@ -10,7 +10,7 @@ const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const baseConfig = require('./webpack.base.config');
-const { ENABLE_ANALYZE, COPYRIGHT, resolvePath } = require('../untils/constants');
+const { ENABLE_ANALYZE, COPYRIGHT, resolvePath } = require('../utils/constants');
 
 let prodConfig = merge(baseConfig, {
     mode: 'production',

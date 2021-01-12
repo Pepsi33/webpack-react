@@ -25,11 +25,12 @@ module.exports = function (api) {
             '@babel/plugin-proposal-optional-chaining',
             ['@babel/plugin-proposal-class-properties', { loose: true }],
             ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+            ['import', { libraryName: 'antd', style: 'css' }], // antd按需加载
         ],
         env: {
             development: {
                 presets: [['@babel/preset-react', { development: true }]],
-                //plugins: ['react-hot-loader/babel'],
+                plugins: ['react-hot-loader/babel'],
             },
             production: {
                 presets: ['@babel/preset-react'],

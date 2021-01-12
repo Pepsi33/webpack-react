@@ -113,8 +113,8 @@ tasks.set('start', () =>
                 const express = require('express');
                 const devConfig = require('./configs/webpack.dev.config');
                 const setupMiddlewares = require('./middlewares/index');
-                const getPort = require('./untils/getPort');
-                const { HOST, DEFAULT_PORT, ENABLE_OPEN } = require('./untils/constants');
+                const getPort = require('./utils/getPort');
+                const { HOST, DEFAULT_PORT, ENABLE_OPEN } = require('./utils/constants');
                 const PORT = await getPort(HOST, DEFAULT_PORT);
                 const address = `http://${HOST}:${PORT}`;
 

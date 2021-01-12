@@ -9,7 +9,7 @@ const {
     ENABLE_VERBOSE,
     HMR_PATH,
     resolvePath,
-} = require('../untils/constants');
+} = require('../utils/constants');
 
 const baseConfig = {
     target: 'web',
@@ -46,8 +46,18 @@ const baseConfig = {
             // Rules for Style Sheets
             {
                 test: /\.css$/,
-                use: getCssLoaders(0),
-                exclude: /node_modules/,
+                oneOf: [
+                    {
+                        use: getCssLoaders(0),
+                        exclude: /node_modules/,
+                    },
+                    // antd css
+                    {
+                        include: [resolvePath('./node_modules/antd')],
+                        exclude: resolvePath('./src'),
+                        use: [__DEV__ ? 'style-loader' : MiniCssExtractLoader.loader, 'css-loader'],
+                    },
+                ],
             },
             {
                 test: /\.less$/,
